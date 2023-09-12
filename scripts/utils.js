@@ -17,10 +17,9 @@ const headers = {
   "Referrer-Policy": "origin-when-cross-origin",
 };
 
-export async function getAdvisorie(url) {
-  const response = await axios.get(url, headers);
-
-  console.log(response.data);
+export async function getAdvisories(url) {
+  const { data } = await axios.get(url, headers);
+  return data;
 }
 
 export function formatDate(date) {
